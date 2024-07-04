@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react';
-import PageTitle from 'components/PageTitle';
-import { PageContainer, FormContainer } from './MainPage.styled';
+import { useEffect, useState } from "react";
+import PageTitle from "components/PageTitle";
+import { PageContainer, FormContainer } from "./MainPage.styled";
 
-import Container from 'components/Container';
-import { Modal } from 'components/Modal';
-import CalculatorСalorieForm from 'components/Forms/CalculatorСalorieForm/CalculatorСalorieForm';
-import { useMobileModal } from 'hooks/ui';
-import { useTranslation } from 'react-i18next';
+import Container from "components/Container";
+import { Modal } from "components/Modal";
+import CalculatorСalorieForm from "components/Forms/CalculatorСalorieForm/CalculatorСalorieForm";
+import { useMobileModal } from "hooks/ui";
+import { useTranslation } from "react-i18next";
 
 const MainPage = () => {
   const [showModal, setShowModal] = useState(false);
-  const openModal = () => setShowModal(prev => !prev);
+  const openModal = () => setShowModal((prev) => !prev);
 
   const [showMobileModal, , hideMobileModal] = useMobileModal();
 
@@ -27,7 +27,7 @@ const MainPage = () => {
   return (
     <Container>
       <PageContainer>
-        <PageTitle title={t('title')} />
+        <PageTitle title={t("title")} />
         <FormContainer>
           <CalculatorСalorieForm openModal={openModal} />
         </FormContainer>
